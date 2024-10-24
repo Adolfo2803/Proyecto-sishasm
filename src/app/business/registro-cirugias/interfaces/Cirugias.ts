@@ -2,6 +2,7 @@ export default interface Cirugias{
     id:number;
     fechaCirugia: String;
     numCirugia: Number;
+    numQuirofano: Number;
     numExpediente: Number;
     nomPaciente: String;
     apellidoPPaciente: String;
