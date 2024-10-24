@@ -1,1 +1,99 @@
-<p>vacaciones works!</p>
+<div class="container-fluid ">
+    <div class="col form-container">
+        <h2 class="title">Registro de Vacaciones</h2>
+        <div class="hrflex"></div>
+        <form [formGroup]="vacacionesForms" (ngSubmit)="onSubmit()" class="row g-3 needs-validation " novalidate>
+            <div class="row">
+                <!-- Campo de Nombre -->
+                <div class="col-md-6 mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input formControlName="nombreEnfermero" type="text" class="form-control" id="nombre"
+                        placeholder="Nombre" required>
+                </div>
+                <!-- Campo de Registro -->
+                <div class="col-md-6 mb-3">
+                    <label for="registro" class="form-label">Registro</label>
+                    <input formControlName="registroDoctor" type="text" class="form-control" id="registro"
+                        placeholder="Registro" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Campo de Motivo -->
+                <div class="col-md-6 mb-3">
+                    <label for="motivo" class="form-label">Motivo</label>
+                    <input formControlName="motivoVacaciones" type="text" class="form-control" id="motivo"
+                        placeholder="Motivo" required>
+                </div>
+                <!-- Campo de Fecha Inicio -->
+                <div class="col-md-3 mb-3">
+                    <label for="fecha_inicio" class="form-label">Fecha Inicio</label>
+                    <input formControlName="fechaInicioVacaciones" type="date" class="form-control" id="fecha_inicio"
+                        required>
+                </div>
+                <!-- Campo de Fecha Término -->
+                <div class="col-md-3 mb-3">
+                    <label for="fecha_termino" class="form-label">Fecha Término</label>
+                    <input formControlName="fechaTerminoVacaciones" type="date" class="form-control" id="fecha_termino"
+                        required>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Campo de Estado -->
+                <div class="col-md-6 mb-3">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" required>
+                        <option value="">Selecciona el estado</option>
+                        <option value="aprobado">Aprobado</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="rechazado">Rechazado</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botón Guardar -->
+            <button (click)="Guardar()" type="submit" class="btn btn-success w-100">Guardar</button>
+        </form>
+
+
+    </div>
+    <div class="row">
+        <div col-12>
+            <table class="table table-responsive">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Registro</th>
+                        <th scope="col">Motivo</th>
+                        <th scope="col">Fecha Inicio</th>
+                        <th scope="col">Fecha Termino</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Ivan</td>
+                        <td>Jose</td>
+                        <td>11/10/2024</td>
+                        <td>15/10/2024</td>
+                        <td>Aprobado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Larry</td>
+                        <td>Tos</td>
+                        <td>25/10/2024</td>
+                        <td>28/10/2024</td>
+                        <td>Aprobado</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+
+</div>
