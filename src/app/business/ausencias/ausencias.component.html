@@ -43,7 +43,7 @@
   
   
             <!-- Botón Guardar -->
-            <button (click)="Guardar()" type="submit" class="btn btn-success w-100">Guardar</button>
+            <button (click)="agregarData()" type="submit" class="btn btn-success w-100">Guardar</button>
         </form>
   
 
@@ -61,22 +61,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Ivan</td>
-                        <td>Jose</td>
-                        <td>11/10/2024</td>
-                        <td>15/10/2024</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Larry</td>
-                        <td>Tos</td>
-                        <td>25/10/2024</td>
-                        <td>28/10/2024</td>
-                    </tr>
+                    @for (item of ausenciasService.tabla; track $index) {
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{item.name}}</td>
+                            <td>{{item.registro}}</td>
+                            <td>{{item.motivo}}</td>
+                            <td>{{item.fecha_inicio}}</td>
+                            <td>{{item.fecha_termino}}</td>
+                        </tr>
+                        
+                    }
+                    
                 </tbody>
             </table>
+            
 
         </div>
 

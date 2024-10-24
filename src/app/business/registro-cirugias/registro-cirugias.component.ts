@@ -38,10 +38,7 @@ export default class RegistroCirugiasComponent {
     
   });
 
-  onSubmit() {
-    console.log(this.cirugiaForm.value);
 
-  }
 
   ConfirmarDatos() {
     if (this.cirugiaForm.valid) {
