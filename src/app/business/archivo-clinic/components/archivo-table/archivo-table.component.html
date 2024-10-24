@@ -1,0 +1,35 @@
+<div class="row">
+    <div col-12>
+      <table class="table table-responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Expediente</th>
+            <th scope="col">Nombre del Paciente</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido materno</th>
+            <th scope="col">Fecha Elaboración</th>
+            <th scope="col">Nombre_elaboracion</th>
+            <th scope="col">matricula</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          @for(tablaitem of tabla_archive.tabla_data; track $index) {
+            <tr>
+          <td>{{tablaitem.expediente}}</td>
+          <td>{{tablaitem.nombre}}</td>
+          <td>{{tablaitem.ap_paterno}}</td>
+          <td>{{tablaitem.ap_materno}}</td>
+          <td>{{tablaitem.fecha}}</td>
+          <td>{{tablaitem.elabora}}</td>
+          <td>{{tablaitem.matri}}</td>
+
+          
+        </tr>
+          }
+        </tbody>
+      </table>
+  
+    </div>
+  
+  </div>    

@@ -1,1 +1,119 @@
-<p>Componente archivo</p>
+<div class="container">
+    <div class="form-container">
+      <form class="" [formGroup]="form" (ngSubmit)="resetForm()">
+        <h1 class="title">Registro Archivo Clínico</h1>
+        <div class="hrflex"></div>
+        <div class="row">
+          <div class="col-sm">
+            <label for="expediente">Expediente</label>
+            <input type="text" formControlName="expediente" class="form-control" id="expediente"
+              placeholder="Expediente...">
+            <div class="alert alert-danger" [hidden]="form.get('expediente')?.valid ||form.get('expediente')?.pristine ">
+              Expediente Obligatorio</div>
+          </div>
+          <div class="col-sm">
+            <label for="nombre">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre...">
+            <div class="alert alert-danger" [hidden]="form.get('nombre')?.valid ||form.get('nombre')?.pristine ">Nombre
+              Obligatorio</div>
+  
+          </div>
+          <div class="col-sm">
+            <label for="apellido-paterno">Apellido Paterno</label>
+            <input type="text" formControlName="ap_paterno" class="form-control" id="apellido-paterno"
+              placeholder="Apellido Paterno...">
+            <div class="alert alert-danger" [hidden]="form.get('ap_paterno')?.valid ||form.get('ap_paterno')?.pristine ">
+              Apellido Pat. Obligatorio</div>
+  
+          </div>
+          <div class="col-sm">
+            <label for="apellido-materno">Apellido Materno</label>
+            <input type="text" formControlName="ap_materno" class="form-control" id="apellido-materno"
+              placeholder="Apellido Materno...">
+            <div class="alert alert-danger" [hidden]="form.get('ap_materno')?.valid ||form.get('ap_materno')?.pristine ">
+              Apellido Mat. Obligatorio</div>
+  
+          </div>
+        </div>
+  
+        <br>
+        <div class="row">
+          <div class="col-sm">
+            <label for="fecha-elaboracion">Fecha Elaboración</label>
+            <input type="date" formControlName="fecha" class="form-control" id="fecha-elaboracion">
+            <div class="alert alert-danger" [hidden]="form.get('fecha')?.valid ||form.get('fecha')?.pristine ">
+              Fecha elab. Obligatorio</div>
+  
+          </div>
+          <div class="col-sm">
+            <label for="elabora">Elabora</label>
+            <input type="text" formControlName="elabora" class="form-control" id="elabora" placeholder="Elabora...">
+            <div class="alert alert-danger"
+              [hidden]="form.get('elabora')?.valid ||form.get('elabora')?.pristine ">Nombre de quien elabora es
+              Obligatorio</div>
+  
+          </div>
+          <div class="col-sm">
+            <label for="matricula">Matrícula</label>
+            <input type="text" formControlName="matri" class="form-control" id="matricula" placeholder="Matrícula...">
+            <div class="alert alert-danger" [hidden]="form.get('matri')?.valid ||form.get('matri')?.pristine ">
+              Matricula Obligatoria</div>
+  
+          </div>
+        </div>
+  
+  
+        <div class="row">
+          <div class="col-sm">
+            <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
+            <button type="submit" class="btn  btn-nuevo">Nuevo</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br>
+  <!--
+  
+  <div class="row">
+    <div col-12>
+      <table class="table table-responsive">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Expediente</th>
+            <th scope="col">Nombre del Paciente</th>
+            <th scope="col">Apellido Paterno</th>
+            <th scope="col">Apellido materno</th>
+            <th scope="col">Fecha Elaboración</th>
+            <th scope="col">Nombre_elaboracion</th>
+            <th scope="col">matricula</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+         
+            @for(paciente of pacienteService.pacientes; track $index) {
+              <tr>
+            <td>{{paciente.expediente}}</td>
+            <td>{{paciente.nombre}}</td>
+            <td>{{paciente.paterno}}</td>
+            <td>{{paciente.materno}}</td>
+            <td>{{paciente.fecha_elab}}</td>
+            <td>{{paciente.elabora_name}}</td>
+            <td>{{paciente.matricula}}</td>
+  
+            
+          </tr>
+            }
+          
+        </tbody>
+      </table>
+  
+    </div>
+  
+  </div>
+  -->
+  <app-archivo-table></app-archivo-table>
+  <!--<app-formpractica></app-formpractica>-->
+
+  <router-outlet />
