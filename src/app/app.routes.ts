@@ -13,6 +13,16 @@ export const routes: Routes = [
                 path: 'archivo_clinic',
                 loadComponent: () => import('./business/archivo-clinic/archivo-clinic.component')
             },
+
+            {
+                path: 'vacaciones',
+                loadComponent: () => import('./business/vacaciones/vacaciones.component')
+            },
+
+           
+
+
+
             {
                 path: '',
                 redirectTo: 'dashboard',
