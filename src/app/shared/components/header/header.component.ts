@@ -13,7 +13,8 @@ import { log } from 'console';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent   {
-
+user?: string;
+//user: string= "Martin, Perez";
 currentDate: Date = new Date();
 
 constructor(private fechaService: FechaserviceService){
