@@ -16,6 +16,7 @@ export default class RegistroCirugiasComponent {
   cirugiaForm: FormGroup = new FormGroup({
     fechaCirugia: new FormControl('', ),
     numCirugia: new FormControl(''),
+    numQuirofano: new FormControl (''),
     numExpediente: new FormControl(''),
     nomPaciente: new FormControl(''),
     apellidoPPaciente: new FormControl(''),
