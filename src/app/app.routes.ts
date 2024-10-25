@@ -33,6 +33,10 @@ export const routes: Routes = [
                 path: 'registro-cirugias',
                 loadComponent: () => import('./business/registro-cirugias/registro-cirugias.component')
             },
+            {
+                path: 'busqueda-cirugias',
+                loadComponent: () => import('./business/busqueda-cirugias/busqueda-cirugias.component')
+            },
 
            
 
