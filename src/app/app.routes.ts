@@ -13,6 +13,10 @@ export const routes: Routes = [
                 path: 'archivo_clinic',
                 loadComponent: () => import('./business/archivo-clinic/archivo-clinic.component')
             },
+            {
+                path: 'buscar_archivo',
+                loadComponent: () => import('./business/archivo-clinic/components/busqueda/busqueda.component')
+            },
 
             {
                 path: 'vacaciones',
