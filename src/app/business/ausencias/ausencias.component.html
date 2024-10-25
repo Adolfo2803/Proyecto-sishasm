@@ -12,14 +12,18 @@
              >
             <div class="row">
                 <!-- Campo de Nombre -->
-                <div class="col-md-6 mb-3">
+                <div class="col-md-3 mb-3">
                     <label for="name" class="form-label">Nombre</label>
                     <input formControlName = "name" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
                 </div>
                 <!-- Campo de Registro -->
-                <div class="col-md-6 mb-3">
+                <div class="col-md-4 mb-3">
                     <label for="registro" class="form-label">Registro</label>
                     <input formControlName = "registro" type ="text" class="form-control" id="registro" placeholder="Registro" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="autorizo" class="form-label">Autorizo</label>
+                    <input formControlName = "autorizo" type ="text" class="form-control" id="autorizo" placeholder="Autorizo" required>
                 </div>
             </div>
   
@@ -55,6 +59,7 @@
                     <tr>
                         <th scope="col">Nombre</th>
                         <th scope="col">Registro</th>
+                        <th scope="col">Autorizo</th>
                         <th scope="col">Motivo</th>
                         <th scope="col">Fecha Inicio</th>
                         <th scope="col">Fecha Termino</th>
@@ -66,6 +71,7 @@
                           
                             <td>{{item.name}}</td>
                             <td>{{item.registro}}</td>
+                            <td>{{item.autorizo}}</td>
                             <td>{{item.motivo}}</td>
                             <td>{{item.fecha_inicio}}</td>
                             <td>{{item.fecha_termino}}</td>

@@ -18,6 +18,7 @@ export default class AusenciasComponent {
   ({
     name: new FormControl(''),
     registro: new FormControl(''),
+    autorizo: new FormControl(''),
     motivo: new FormControl(''),
     fecha_inicio: new FormControl(''),
     fecha_termino: new FormControl(''),
