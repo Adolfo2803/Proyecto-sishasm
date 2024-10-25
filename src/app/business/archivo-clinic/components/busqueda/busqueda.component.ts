@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TablaArchiService } from '../../services/tabla-archi.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -9,6 +10,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './busqueda.component.css'
 })
 export default class BusquedaComponent {
+  constructor(public tabla_archive: TablaArchiService){}
   formBusqueda: FormGroup = new FormGroup
 
   ({
