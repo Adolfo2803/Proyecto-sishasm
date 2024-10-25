@@ -16,7 +16,7 @@ export default class BusquedaComponent {
   ({
     expediente: new FormControl('', Validators.required),
      nombre: new FormControl('', Validators.required),
-     
+     search: new FormControl('', Validators.required)
    });
 
   onSubmit() {
