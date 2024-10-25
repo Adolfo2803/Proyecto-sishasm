@@ -1,1 +1,76 @@
-<p>busqueda works!</p>
+<div class="container">
+    <div class="main-content">
+        <h1 class="title">Búsqueda de Archivo</h1>
+        <div class="hrflex"></div>
+        
+        
+        <div class="row mb-3">
+            <div class="col-12 col-md-2 mb-2">
+                <a class="btn btn-Fecha w-100"  role="button">Expediente</a>
+            </div>
+            <div class="col-12 col-md-2 mb-2">
+                <button class="btn btn-Cirujia w-100" type="submit">Nombre</button>
+            </div>
+           
+            
+        </div>
+      
+
+        
+        <form [formGroup]="formBusqueda" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="searchInput" class="form-label">Búsqueda</label>
+                    <input type="text" class="form-control" id="searchInput" formControlName="search" placeholder="Ingrese un dato">
+                    
+                </div>
+                <div class="row">
+                    <div col-12>
+                      <table class="table table-responsive">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Expediente</th>
+                            <th scope="col">Nombre del Paciente</th>
+                            <th scope="col">Apellido Paterno</th>
+                            <th scope="col">Apellido materno</th>
+                            <th scope="col">Fecha Elaboración</th>
+                            <th scope="col">Nombre_elaboracion</th>
+                            <th scope="col">matricula</th>
+                  
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @for(tablaitem of tabla_archive.tabla_data; track $index) {
+                            <tr>
+                          <td>{{tablaitem.expediente}}</td>
+                          <td>{{tablaitem.nombre}}</td>
+                          <td>{{tablaitem.ap_paterno}}</td>
+                          <td>{{tablaitem.ap_materno}}</td>
+                          <td>{{tablaitem.fecha}}</td>
+                          <td>{{tablaitem.elabora}}</td>
+                          <td>{{tablaitem.matri}}</td>
+                
+                          
+                        </tr>
+                          }
+                        </tbody>
+                      </table>
+                  
+                    </div>
+                  
+                  </div>    
+                
+            </div>
+
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="btn btn-danger" type="submit" [disabled]="formBusqueda.validator">Búsqueda</button>
+               
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
