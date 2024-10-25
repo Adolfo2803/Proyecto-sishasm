@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { AusenciasService } from './Services/ausencias.service';
 
 @Component({
   selector: 'app-ausencias',
@@ -9,26 +10,28 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './ausencias.component.css'
 })
 export default class AusenciasComponent {
-  ausenciasForm = new FormGroup({
-    nombreEnfermero: new FormControl(''),
-    registroDoctor: new FormControl(''),
+
+
+  constructor (public ausenciasService: AusenciasService){}
+
+  ausenciasForm:FormGroup = new FormGroup
+  ({
+    name: new FormControl(''),
+    registro: new FormControl(''),
     motivo: new FormControl(''),
-    fechaInicio: new FormControl(''),
-    fechaTermino: new FormControl(''),
+    fecha_inicio: new FormControl(''),
+    fecha_termino: new FormControl(''),
   })
 
+  agregarData(){
+   
+this.ausenciasService.agregarAusencia(this.ausenciasForm.value);
+     
  
-  onSubmit() {
-    console.log(this.ausenciasForm.value);
   }
 
-  Guardar() {
-    if (this.ausenciasForm.valid) {
-      console.log('Datos del formulario:', this.ausenciasForm.value);
-      alert('Formulario guardado correctamente!');
-    } else {
-      alert('El formulario no es válido. Por favor, rellena todos los campos requeridos.');
-    }
-  }
+  
+ 
+ 
   }
   
