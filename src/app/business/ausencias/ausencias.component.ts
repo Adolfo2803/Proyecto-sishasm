@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { AusenciasService } from './Services/ausencias.service';
-import Ausencias from './Interfaces/Ausencias';
-import { TablaArchiService } from '../archivo-clinic/services/tabla-archi.service';
-import { ArchivoTableComponent } from '../archivo-clinic/components/archivo-table/archivo-table.component';
 
 @Component({
   selector: 'app-ausencias',
@@ -14,21 +11,21 @@ import { ArchivoTableComponent } from '../archivo-clinic/components/archivo-tabl
 })
 export default class AusenciasComponent {
 
-  
 
-  constructor (private ausenciasService: AusenciasService){}
-  ausenciasForm = new FormGroup
+  constructor (public ausenciasService: AusenciasService){}
+
+  ausenciasForm:FormGroup = new FormGroup
   ({
-    nombreEnfermero: new FormControl(''),
-    registroDoctor: new FormControl(''),
+    name: new FormControl(''),
+    registro: new FormControl(''),
     motivo: new FormControl(''),
-    fechaInicio: new FormControl(''),
-    fechaTermino: new FormControl(''),
+    fecha_inicio: new FormControl(''),
+    fecha_termino: new FormControl(''),
   })
 
   agregarData(){
    
-     this.ausenciasService.insertarDato(this.ausenciasForm.value);
+this.ausenciasService.agregarAusencia(this.ausenciasForm.value);
      
  
   }

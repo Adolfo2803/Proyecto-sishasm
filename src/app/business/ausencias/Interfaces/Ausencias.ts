@@ -1,5 +1,5 @@
 export default interface Ausencias{
-   
+  
     name: string,
     registro:string;
     motivo:string;

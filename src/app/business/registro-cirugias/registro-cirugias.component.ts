@@ -12,13 +12,10 @@ import { CirugiasService } from './services/cirugias.service';
 export default class RegistroCirugiasComponent {
 
   constructor(public CirugiasService: CirugiasService){}
-
-
-
+ 
   cirugiaForm: FormGroup = new FormGroup({
     fechaCirugia: new FormControl('', ),
     numCirugia: new FormControl(''),
-    numQuirofano: new FormControl(''),
     numExpediente: new FormControl(''),
     nomPaciente: new FormControl(''),
     apellidoPPaciente: new FormControl(''),
@@ -39,7 +36,10 @@ export default class RegistroCirugiasComponent {
     
   });
 
+  onSubmit() {
+    console.log(this.cirugiaForm.value);
 
+  }
 
   ConfirmarDatos() {
     if (this.cirugiaForm.valid) {
@@ -59,6 +59,8 @@ export default class RegistroCirugiasComponent {
     }
   }
   
+
+
 
 
 }

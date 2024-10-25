@@ -6,22 +6,24 @@ import Ausencias from '../Interfaces/Ausencias';
 })
 export class AusenciasService {
 
-  tabla:Ausencias[]
+  ausencias: Ausencias[];
  
 
   constructor() {
-    this.tabla=
-    [{
+    this.ausencias= [
+      {
+      
     name:"Ivan",
     registro: "Oliver",
     motivo:"Fiebre",
-    fecha_inicio:"14/10/3034",
-    fecha_termino:"18/10/2024",
+    fecha_inicio:"23-10-24",
+    fecha_termino:"24-1024",
     }]
     
    }
-insertarDato(tabla: Ausencias){
-  this.tabla.push(tabla)
+
+agregarAusencia(ausencias: Ausencias){
+  this.ausencias.push(ausencias)
 }
    
 }

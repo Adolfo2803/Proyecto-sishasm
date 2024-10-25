@@ -13,13 +13,13 @@
             <div class="row">
                 <!-- Campo de Nombre -->
                 <div class="col-md-6 mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input formControlName = "nombreEnfermero" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                    <label for="name" class="form-label">Nombre</label>
+                    <input formControlName = "name" type="text" class="form-control" id="nombre" placeholder="Nombre" required>
                 </div>
                 <!-- Campo de Registro -->
                 <div class="col-md-6 mb-3">
                     <label for="registro" class="form-label">Registro</label>
-                    <input formControlName = "registroDoctor" type ="text" class="form-control" id="registro" placeholder="Registro" required>
+                    <input formControlName = "registro" type ="text" class="form-control" id="registro" placeholder="Registro" required>
                 </div>
             </div>
   
@@ -27,17 +27,17 @@
                 <!-- Campo de Motivo -->
                 <div class="col-md-6 mb-3">
                     <label for="motivo" class="form-label">Motivo</label>
-                    <input formControlName ="motivoVacaciones" type = "text" class="form-control" id="motivo" placeholder="Motivo" required>
+                    <input formControlName ="motivo" type = "text" class="form-control" id="motivo" placeholder="Motivo" required>
                 </div>
                 <!-- Campo de Fecha Inicio -->
                 <div class="col-md-3 mb-3">
                     <label for="fecha_inicio" class="form-label">Fecha Inicio</label>
-                    <input formControlName ="fechaInicioVacaciones" type="date" class="form-control" id="fecha_inicio" required>
+                    <input formControlName ="fecha_inicio" type="date" class="form-control" id="fecha_inicio" required>
                 </div>
                 <!-- Campo de Fecha Término -->
                 <div class="col-md-3 mb-3">
                     <label for="fecha_termino" class="form-label">Fecha Término</label>
-                    <input formControlName ="fechaTerminoVacaciones" type="date" class="form-control" id="fecha_termino" required>
+                    <input formControlName ="fecha_termino" type="date" class="form-control" id="fecha_termino" required>
                 </div>
             </div>
   
@@ -61,9 +61,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @for (item of ausenciasService.tabla; track $index) {
+                    @for (item of ausenciasService.ausencias; track $index) {
                         <tr>
-                            <th scope="row">1</th>
+                          
                             <td>{{item.name}}</td>
                             <td>{{item.registro}}</td>
                             <td>{{item.motivo}}</td>
