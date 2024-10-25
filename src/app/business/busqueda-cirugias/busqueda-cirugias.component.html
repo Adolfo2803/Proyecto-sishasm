@@ -1,1 +1,56 @@
-<p>busqueda-cirugias works!</p>
+<div class="container">
+    <div class="main-content">
+        <h1 class="title">Búsqueda de Cirugías</h1>
+        <h1 class="title">Prueba de Esteisy</h1>
+        <div class="hrflex"></div>
+        
+        
+        <div class="row mb-3">
+            <div class="col-12 col-md-2 mb-2">
+                <a class="btn btn-Fecha w-100"  role="button">Fecha</a>
+            </div>
+            <div class="col-12 col-md-2 mb-2">
+                <button class="btn btn-Cirujia w-100" type="submit">Cirugia</button>
+            </div>
+            <div class="col-12 col-md-2 mb-2">
+                <button class="btn btn-Expediente w-100" type="submit">Expediente</button>
+            </div>
+            <div class="col-12 col-md-2 mb-2">
+                <button class="btn btn-Nombre w-100" type="submit">Nombre</button>
+            </div>
+            <div class="col-12 col-md-2 mb-2">
+                <button class="btn btn-Medico w-100" type="submit">Medico</button>
+            </div>
+            <div class="col-12 col-md-2 mb-2">
+                <button class="btn btn-Cirujano w-100" type="submit">Cirujano</button>
+            </div>
+        </div>
+      
+
+        
+        <form [formGroup]="busquedaCForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <label for="searchInput" class="form-label">Búsqueda</label>
+                    <input type="text" class="form-control" id="searchInput" formControlName="search" placeholder="Ingrese un dato">
+                    
+                </div>
+                <div class="col-12 mb-3">
+                   <label for="tableInput" class="form-label">Tabla</label>
+                    <textarea class="form-control" id="tableInput" formControlName="table" rows="3"></textarea>  
+                </div>
+                
+            </div>
+
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <button class="btn btn-danger" type="submit" [disabled]="busquedaCForm.validator">Búsqueda</button>
+               
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
