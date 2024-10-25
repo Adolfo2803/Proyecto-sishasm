@@ -1,28 +1,28 @@
 <div class="container">
     <div class="main-content">
         <h1 class="title">Búsqueda de Cirugías</h1>
-        <h1 class="title">Prueba de Esteisy</h1>
+         
         <div class="hrflex"></div>
         
         
-        <div class="row mb-3">
+        <div class="row mb-3" >
             <div class="col-12 col-md-2 mb-2">
-                <a class="btn btn-Fecha w-100"  role="button">Fecha</a>
+                <a class="btn btn-Fecha w-100"  role="button"  [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Fecha'" (click)="ocultarBotones('Fecha')">Fecha</a>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujia w-100" type="submit">Cirugia</button>
+                <button class="btn btn-Cirujia w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Cirugia'" (click)="ocultarBotones('Cirugia')">Cirugia</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Expediente w-100" type="submit">Expediente</button>
+                <button class="btn btn-Expediente w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Expediente'" (click)="ocultarBotones('Expediente')">Expediente</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Nombre w-100" type="submit">Nombre</button>
+                <button class="btn btn-Nombre w-100" type="submit"  [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Nombre'" (click)="ocultarBotones('Nombre')">Nombre</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Medico w-100" type="submit">Medico</button>
+                <button class="btn btn-Medico w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Medico'" (click)="ocultarBotones('Medico')">Medico</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujano w-100" type="submit">Cirujano</button>
+                <button class="btn btn-Cirujano w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Cirujano'" (click)="ocultarBotones('Cirujano')">Cirujano</button>
             </div>
         </div>
       
