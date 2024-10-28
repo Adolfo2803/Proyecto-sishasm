@@ -14,51 +14,63 @@
             </div>
           </div>
           
-          <div class="col-sm">
-            <label for="nombre">Nombre</label>
-            <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre...">
+          <div class="col-sm form-group">
+            <div class="input-container">
+            <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="ingresa Nombre">
+              <label for="nombre" class="floating-label">Nombre</label>
+            </div>
             <div class="alert alert-danger" [hidden]="form.get('nombre')?.valid ||form.get('nombre')?.pristine ">Nombre
               Obligatorio</div>
-  
           </div>
-          <div class="col-sm">
-            <label for="apellido-paterno">Apellido Paterno</label>
-            <input type="text" formControlName="ap_paterno" class="form-control" id="apellido-paterno"
-              placeholder="Apellido Paterno...">
+          
+          <div class="col-sm form-group">
+            <div class="input-container">
+            <input type="text" formControlName="ap_paterno" class="form-control" id="apellido-paterno" placeholder="Apellido Paterno...">
+              <label for="apellido-paterno" class="floating-label">Apellido Paterno</label>
+            </div>
             <div class="alert alert-danger" [hidden]="form.get('ap_paterno')?.valid ||form.get('ap_paterno')?.pristine ">
               Apellido Pat. Obligatorio</div>
-  
           </div>
-          <div class="col-sm">
-            <label for="apellido-materno">Apellido Materno</label>
-            <input type="text" formControlName="ap_materno" class="form-control" id="apellido-materno"
+          
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="ap_materno" class="form-control" id="apellido-materno"
               placeholder="Apellido Materno...">
+              <label for="apellido-materno" class="floating-label">pellido Materno</label>
+            </div>
             <div class="alert alert-danger" [hidden]="form.get('ap_materno')?.valid ||form.get('ap_materno')?.pristine ">
               Apellido Mat. Obligatorio</div>
-  
           </div>
         </div>
   
         <br>
         <div class="row">
-          <div class="col-sm">
-            <label for="fecha-elaboracion">Fecha Elaboración</label>
+          <div class="col-sm form-group">
+            <div class="input-container">
             <input type="date" formControlName="fecha" class="form-control" id="fecha-elaboracion">
+            <label for="fecha-elaboracion" class="floating-label">Fecha Elaboración</label>
+            </div>
+
             <div class="alert alert-danger" [hidden]="form.get('fecha')?.valid ||form.get('fecha')?.pristine ">
               Fecha elab. Obligatorio</div>
-  
           </div>
-          <div class="col-sm">
-            <label for="elabora">Elabora</label>
-            <input type="text" formControlName="elabora" class="form-control" id="elabora" placeholder="Elabora...">
+
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="elabora" class="form-control" id="elabora" placeholder="Elabora...">
+            <label for="elabora" class="floating-label">Elabora</label>
+
+            </div>
             <div class="alert alert-danger"
               [hidden]="form.get('elabora')?.valid ||form.get('elabora')?.pristine ">Nombre de quien elabora es
               Obligatorio</div>
   
           </div>
-          <div class="col-sm">
-            <label for="matricula">Matrícula</label>
-            <input type="text" formControlName="matri" class="form-control" id="matricula" placeholder="Matrícula...">
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="matri" class="form-control" id="matricula" placeholder="Matrícula...">
+            <label for="matricula" class="floating-label">Matrícula</label>
+            </div>
             <div class="alert alert-danger" [hidden]="form.get('matri')?.valid ||form.get('matri')?.pristine ">
               Matricula Obligatoria</div>
   
@@ -69,7 +81,6 @@
         <div class="row">
           <div class="col-sm">
             <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
-            <button type="submit" class="btn  btn-nuevo">Nuevo</button>
           </div>
         </div>
       </form>

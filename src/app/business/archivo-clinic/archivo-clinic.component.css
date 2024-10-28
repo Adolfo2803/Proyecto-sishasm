@@ -27,6 +27,7 @@ hr {
     border-color: #9D2449;
     margin-top: 1rem;
     width: 5rem;
+    font-family: "Montserrat", sans-serif;
     }
     .btn-guardar:hover {
         color: aliceblue;
