@@ -4,13 +4,16 @@
         <h1 class="title">Registro Archivo Clínico</h1>
         <div class="hrflex"></div>
         <div class="row">
-          <div class="col-sm">
-            <label for="expediente">Expediente</label>
-            <input type="text" formControlName="expediente" class="form-control" id="expediente"
-              placeholder="Expediente...">
-            <div class="alert alert-danger" [hidden]="form.get('expediente')?.valid ||form.get('expediente')?.pristine ">
-              Expediente Obligatorio</div>
+          <div class="col-sm form-group">
+            <div class="input-container">
+              <input type="text" formControlName="expediente" class="form-control" id="expediente" placeholder="ingrese expediente" required>
+              <label for="expediente" class="floating-label">Expediente</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('expediente')?.valid || form.get('expediente')?.pristine">
+              Expediente Obligatorio
+            </div>
           </div>
+          
           <div class="col-sm">
             <label for="nombre">Nombre</label>
             <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Nombre...">
