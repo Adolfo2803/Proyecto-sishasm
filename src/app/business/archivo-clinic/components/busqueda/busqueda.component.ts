@@ -26,6 +26,16 @@ export default class BusquedaComponent {
       console.log('Formulario inválido');
     }
   }
+  selectedFilter: string | null = null;
 
+  selectFilter(filter: string) {
+    this.selectedFilter = filter;
+  }
 
+  resetFilter() {
+    this.selectedFilter = null;
+  }
 }
+
+
+
