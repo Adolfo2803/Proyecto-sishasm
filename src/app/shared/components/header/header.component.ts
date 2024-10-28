@@ -2,13 +2,14 @@ import { Component, EventEmitter, OnInit, Output, Pipe,} from '@angular/core';
 import { FechaserviceService } from '../../services/fechaservice.service';
 import { DatePipe } from '@angular/common';
 import { log } from 'console';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [DatePipe],
+  imports: [DatePipe, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

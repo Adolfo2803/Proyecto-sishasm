@@ -37,6 +37,10 @@ export const routes: Routes = [
                 path: 'busqueda-cirugias',
                 loadComponent: () => import('./business/busqueda-cirugias/busqueda-cirugias.component')
             },
+            {
+                path: 'login',
+                loadComponent: () => import('./shared/components/login/login.component')
+            },
 
            
 
