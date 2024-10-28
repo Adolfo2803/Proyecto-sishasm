@@ -17,8 +17,8 @@ export class AusenciasService {
     registro: "Oliver",
     autorizo: "Nayomi",
     motivo:"Fiebre",
-    fecha_inicio:"23-10-24",
-    fecha_termino:"24-10-24",
+    fecha_inicio:"2023-10-2024",
+    fecha_termino:"2024-10-2024",
     }]
     
    }

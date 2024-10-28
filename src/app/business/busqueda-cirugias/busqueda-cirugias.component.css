@@ -14,6 +14,10 @@ input{
     border-color: #9D2449;
     background-color: rgb(239, 238, 238);
 }
+/*ocultar botones*/
+.oculto {
+    display: none;
+  }
 /*botones*/
 .btn-Fecha {
     background-color: #800020; 
@@ -106,3 +110,4 @@ select{
  .title{
         color: #235b4e;
     }
+

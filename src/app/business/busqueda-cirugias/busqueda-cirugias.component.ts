@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-busqueda-cirugias',
@@ -9,6 +10,25 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './busqueda-cirugias.component.css'
 })
 export default class BusquedaCirugiasComponent {
+
+ 
+  //botones escondidos
+  botonSeleccionado: string | null = null; // Para almacenar el botón seleccionado
+
+  ocultarBotones(nombreBoton: string): void {
+    this.botonSeleccionado = nombreBoton;
+    
+    // Desplazar el botón al inicio
+    setTimeout(() => {
+      const botonElement = document.querySelector(`.btn-${nombreBoton}`) as HTMLElement;
+      if (botonElement) {
+        botonElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      console.log("Botones ocultos jijiji"); // Esto ayuda a verificar si se ejecuta el método
+    }, 0);
+  }
+
    //Se define el formulario
    busquedaCForm: FormGroup;
 
@@ -26,5 +46,6 @@ export default class BusquedaCirugiasComponent {
        console.log('Formulario inválido');
      }
    }
+   
 
 }
