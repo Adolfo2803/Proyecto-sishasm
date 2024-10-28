@@ -7,22 +7,22 @@
         
         <div class="row mb-3" >
             <div class="col-12 col-md-2 mb-2">
-                <a class="btn btn-Fecha w-100"  role="button"  [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Fecha'" (click)="ocultarBotones('Fecha')">Fecha</a>
+                <a class="btn btn-Fecha w-100"  role="button"  ngIf="!botonSeleccionado ===null|| botonSeleccionado === 'Fecha'" (click)="ocultarBotones('Fecha')">Fecha</a>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujia w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Cirugia'" (click)="ocultarBotones('Cirugia')">Cirugia</button>
+                <button class="btn btn-Cirujia w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirugia'" (click)="ocultarBotones('Cirugia')">Cirugia</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Expediente w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Expediente'" (click)="ocultarBotones('Expediente')">Expediente</button>
+                <button class="btn btn-Expediente w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Expediente'" (click)="ocultarBotones('Expediente')">Expediente</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Nombre w-100" type="submit"  [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Nombre'" (click)="ocultarBotones('Nombre')">Nombre</button>
+                <button class="btn btn-Nombre w-100" type="submit"  ngIf="!botonSeleccionado || botonSeleccionado === 'Nombre'" (click)="ocultarBotones('Nombre')">Nombre</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Medico w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Medico'" (click)="ocultarBotones('Medico')">Medico</button>
+                <button class="btn btn-Medico w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Medico'" (click)="ocultarBotones('Medico')">Medico</button>
             </div>
             <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujano w-100" type="submit" [class.oculto]="botonSeleccionado && botonSeleccionado !== 'Cirujano'" (click)="ocultarBotones('Cirujano')">Cirujano</button>
+                <button class="btn btn-Cirujano w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirujano'" (click)="ocultarBotones('Cirujano')">Cirujano</button>
             </div>
         </div>
       
@@ -37,7 +37,35 @@
                 </div>
                 <div class="col-12 mb-3">
                    <label for="tableInput" class="form-label">Tabla</label>
-                    <textarea class="form-control" id="tableInput" formControlName="table" rows="3"></textarea>  
+                   <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 
             </div>
