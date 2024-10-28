@@ -3,15 +3,25 @@
         <h1 class="title">Búsqueda de Archivo</h1>
         <div class="hrflex"></div>
         
-        
         <div class="row mb-3">
-            <div class="col-12 col-md-2 mb-2">
-                <a class="btn btn-Fecha w-100"  role="button">Expediente</a>
+          <div class="col-12 col-md-2 mb-2">
+            <div class="filter-container btn-Expediente"
+                 [class.selected]="selectedFilter === 'expediente'"
+                 [class.faded]="selectedFilter && selectedFilter !== 'expediente'">
+              <a class="btn filter-btn" (click)="selectFilter('expediente')" role="button">Expediente</a>
+              <span class="close-icon" (click)="resetFilter()">&times;</span>
             </div>
-            <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujia w-100" type="submit">Nombre</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+            <div class="filter-container btn-Nombre"
+                 [class.selected]="selectedFilter === 'nombre'"
+                 [class.faded]="selectedFilter && selectedFilter !== 'nombre'">
+              <button class="btn filter-btn" (click)="selectFilter('nombre')" type="button">Nombre</button>
+              <span class="close-icon" (click)="resetFilter()">&times;</span>
             </div>
-           
+          </div>
+        </div>
+        
             
         </div>
       
@@ -73,4 +83,3 @@
         </form>
 
     </div>
-</div>

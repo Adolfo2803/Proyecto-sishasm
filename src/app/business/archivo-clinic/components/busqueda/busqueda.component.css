@@ -1,108 +1,70 @@
-.hrflex{
+.hrflex {
     display: block;
     height: 2px;
     border: 0;
     background-color: #235b4e;
     margin: 1em 0;
     padding: 0;
-    
 }
-label{
+
+label {
     color: #9D2449;
 }
-input{
+
+input {
     border-color: #9D2449;
     background-color: rgb(239, 238, 238);
 }
-/*botones*/
-.btn-Fecha {
+
+/* Botones */
+.btn-Expediente, .btn-Nombre {
     background-color: #800020; 
-    color: white; 
-    border-color: #800020; 
+    color: rgb(255, 255, 255); 
+    border: 1px  #a30029; 
+    cursor: pointer;
+    width: 100%; 
+    border-radius: 20px;
 }
-.btn-Fecha:hover {
+
+.btn-Expediente:hover, .btn-Nombre:hover {
     background-color: #DDC9A3; 
     border-color: #DDC9A3; 
 }
-.btn-Fecha:active {
-    background-color: #BC955C; 
+
+.btn-Expediente:active, .btn-Nombre:active {
+    background-color: #ffffff; 
     border-color: #BC955C; 
 }
 
-.btn-Cirujia {
-    background-color: #800020;
-    color: white; 
-    border-color: #800020;
-}
-.btn-Cirujia:hover {
-    background-color: #DDC9A3; 
-    border-color: #DDC9A3; 
-}
-.btn-Cirujia:active {
-    background-color: #BC955C; 
-    border-color: #BC955C; 
+.filter-container {
+    position: relative;
+    color: aliceblue;
 }
 
-.btn-Expediente {
-    background-color: #800020;
-    color: white; 
-    border-color: #800020; 
-}
-.btn-Expediente:hover {
-    background-color: #DDC9A3; 
-    border-color: #DDC9A3; 
-}
-.btn-Expediente:active {
-    background-color: #BC955C; 
-    border-color: #BC955C; 
+.filter-btn {
+    display: inline-block;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    color: rgb(255, 255, 255);
 }
 
-.btn-Nombre {
-    background-color: #800020;
-    color: white; 
-    border-color: #800020; 
-}
-.btn-Nombre:hover {
-    background-color: #DDC9A3; 
-    border-color: #DDC9A3; 
-}
-.btn-Nombre:active {
-    background-color: #BC955C; 
-    border-color: #BC955C; 
+
+
+.close-icon {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    cursor: pointer;
+    display: none; /* Ocultar inicialmente */
+    font-size: 20px; /* Tamaño del icono "x" */
+    color: #9D2449; /* Color del icono */
 }
 
-.btn-Medico {
-    background-color: #800020;
-    color: white; 
-    border-color: #800020; 
+.filter-container.selected .filter-btn {
+    background-color: #BC955C; /* color de fondo destacado */
+    color: #ffffff; /* color de texto */
+    border-color: #BC955C; /* color de borde */
 }
-.btn-Medico:hover {
-    background-color: #DDC9A3; 
-    border-color: #DDC9A3; 
-}
-.btn-Medico:active {
-    background-color: #BC955C; 
-    border-color: #BC955C;  
-}
+      .filter-container.faded {
+        opacity: 0.3; /* apariencia opaca para los filtros inactivos */
+      }
 
-.btn-Cirujano {
-    background-color: #800020;
-    color: white; 
-    border-color: #800020; 
-}
-.btn-Cirujano:hover {
-    background-color: #DDC9A3; 
-    border-color: #DDC9A3; 
-}
-.btn-Cirujano:active {
-    background-color: #BC955C; 
-    border-color: #BC955C;  
-}
-
-select{
-    border-color: #9D2449;
-    background-color: rgb(239, 238, 238);
-}
- .title{
-        color: #235b4e;
-    }
