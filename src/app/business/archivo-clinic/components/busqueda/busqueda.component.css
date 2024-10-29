@@ -108,3 +108,15 @@
             background-color: #9D2449; /* Cambiar a un azul más claro */
             transform: scale(1.05); /* Aumentar un poco el tamaño al hacer hover */
           }
+          .iconform{
+            color: #235b4e;
+            margin-bottom: 4px;
+              }
+              .etiquetaicono{
+                margin-left: 4px;
+                font-weight: 700;
+              }
+              .title{
+                color: #235b4e;
+                text-align: justify;
+            }

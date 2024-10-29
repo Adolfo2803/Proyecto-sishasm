@@ -4,6 +4,7 @@
         <div class="hrflex"></div>
         
         <div class="row mb-3">
+          <i class="iconform bi-search"><span class="etiquetaicono">Buscar por:</span></i>
           <div class="col-12 col-md-2 mb-2">
             <div class="filter-container btn-Expediente"
                  [class.selected]="selectedFilter === 'expediente'"
@@ -29,6 +30,7 @@
         
         <form [formGroup]="formBusqueda" (ngSubmit)="onSubmit()">
             <div class="row">
+              
                 <div class="col-12 mb-3 form-group">
                    <div class="input-container">
                     <input type="text" class="form-control" id="searchInput" formControlName="search" placeholder="Ingrese un dato">
@@ -37,6 +39,7 @@
                    </div> 
                 </div>
                 <div class="row">
+                  <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
                     <div col-12>
                       <table class="table table-responsive">
                         <thead class="thead-dark">
