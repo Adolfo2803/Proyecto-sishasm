@@ -29,10 +29,12 @@
         
         <form [formGroup]="formBusqueda" (ngSubmit)="onSubmit()">
             <div class="row">
-                <div class="col-12 mb-3">
-                    <label for="searchInput" class="form-label">Búsqueda</label>
+                <div class="col-12 mb-3 form-group">
+                   <div class="input-container">
                     <input type="text" class="form-control" id="searchInput" formControlName="search" placeholder="Ingrese un dato">
-                    
+                    <label for="searchInput" class="floating-label">Búsqueda</label>
+
+                   </div> 
                 </div>
                 <div class="row">
                     <div col-12>
@@ -75,7 +77,7 @@
             
             <div class="row">
                 <div class="col-12 text-center">
-                    <button class="btn btn-danger" type="submit" [disabled]="formBusqueda.validator">Búsqueda</button>
+                    <button class="btn btn-guardar" type="submit" [disabled]="formBusqueda.validator">Búsqueda</button>
                
                 </div>
             </div>
