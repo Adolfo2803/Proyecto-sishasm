@@ -11,274 +11,208 @@
       class="row g-3 needs-validation"
       novalidate
     >
-      <div class="row bg-white mt-1 mb-1 p-4">
-        <div class="col-md-2">
-          <label for="fechaCirugia" class="form-label">Fecha cirugia</label>
-          <input
-            formControlName="fechaCirugia"
-            type="date"
-            class="form-control"
-            id="fechaCirugia"
-            required
-          />
+    <div class="row bg-white mt-1 mb-1 p-4">
+  
+      <!-- Sección: Datos Cirugía -->
+      <div class="col-12 mb-1">
+        <i class="iconform bi-info-circle"><span class="etiquetaicono">Datos Generales</span></i>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="fechaCirugia" class="floating-label">Fecha Cirugía</label>
+          <input formControlName="fechaCirugia" type="date" class="form-control" id="fechaCirugia" required />
           <div class="valid-feedback">Correcto!</div>
         </div>
-        <div class="col-md-1">
-          <label for="numCirugia" class="form-label">N.º de Cirugía</label>
-          <input
-            formControlName="numCirugia"
-            type="number"
-            class="form-control"
-            id="numCirugia"
-            placeholder="00"
-            required
-          />
-        </div>
-        <div class="col-md-1">
-          <label for="numQuirofano" class="form-label"
-            >N.º de Quirófano</label
-          >
-          <input
-            formControlName="numQuirofano"
-            type="number"
-            class="form-control"
-            id="numQuirofano"
-            placeholder="00"
-            required
-          />
-        </div>
-        <div class="col-md-2">
-          <label for="numExpediente" class="form-label"
-            >Número de Expediente</label
-          >
-          <input
-            formControlName="numExpediente"
-            type="number"
-            class="form-control"
-            id="numExpediente"
-            placeholder="00"
-            required
-          />
-        </div>
-        <div class="col-md-2">
-          <label for="nomPaciente" class="form-label"
-            >Nombre del Paciente</label
-          >
-          <input
-            formControlName="nomPaciente"
-            type="text"
-            class="form-control"
-            id="nomPaciente"
-            placeholder="Nombre"
-            required
-          />
-        </div>
-        <div class="col-md-2">
-          <label for="apellidoPPaciente" class="form-label"
-            >Apellido Paterno</label
-          >
-          <input
-            formControlName="apellidoPPaciente"
-            type="text"
-            class="form-control"
-            id="apellidoPPaciente"
-            placeholder="Primer Apellido"
-            required
-          />
-        </div>
-        <div class="col-md-2">
-          <label for="apellidoMPaciente" class="form-label"
-            >Apellido Materno</label
-          >
-          <input
-            formControlName="apellidoMPaciente"
-            type="text"
-            class="form-control"
-            id="apellidoMPaciente"
-            placeholder="Segundo Apellido"
-            required
-          />
-        </div>
-        <div class="col-md-4">
-          <label for="medicamento" class="form-label"
-            >Nombre del Cirujano</label
-          >
-          <select
-            formControlName="medicamento"
-            id="medicamento"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="nomAnestesiologo" class="form-label"
-            >Nombre del Anestesiólogo</label
-          >
-          <select
-            formControlName="nomAnestesiologo"
-            id="nomAnestesiologo"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="nomResidente" class="form-label"
-            >Nombre del Residente</label
-          >
-          <select
-            formControlName="nomResidente"
-            id="nomResidente"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="nomCirugia" class="form-label"
-            >Nombre de la Cirugía</label
-          >
-          <select
-            formControlName="nomCirugia"
-            id="nomCirugia"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="nomEnfeInt" class="form-label"
-            >Nombre del Enfermero Interno</label
-          >
-          <select
-            formControlName="nomEnfeInt"
-            id="nomEnfeInt"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-4">
-          <label for="nomEnfeCir" class="form-label"
-            >Nombre del Enfermero Circulante</label
-          >
-          <select
-            formControlName="nomEnfeCir"
-            id="nomEnfeCir"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="tipoAnes" class="form-label">Tipo de Anestesia</label>
-          <select
-            formControlName="tipoAnes"
-            id="tipoAnes"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-1">
-          <label for="iniciaAnes" class="form-label">Inicio Anestesia</label>
-          <input
-            formControlName="iniciaAnes"
-            type="datetime-local"
-            class="form-control"
-            id="iniciaAnes"
-            required
-          />
-        </div>
-        <div class="col-md-1">
-          <label for="finAnes" class="form-label">Fin Anestesia</label>
-          <input
-            formControlName="finAnes"
-            type="datetime-local"
-            class="form-control"
-            id="finAnes"
-            required
-          />
-        </div>
-        <div class="col-md-4">
-          <label for="medicamento" class="form-label">Medicamento</label>
-          <select
-            formControlName="medicamento"
-            id="medicamento"
-            class="form-select"
-            required
-          >
-            <option selected>Choose</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="suturas" class="form-label">Suturas</label>
-          <input
-            formControlName="suturas"
-            type="text"
-            class="form-control"
-            id="suturas"
-            placeholder="Describir"
-            required
-          />
-        </div>
-        <div class="col-md-2">
-          <label for="material" class="form-label">Material</label>
-          <input
-            formControlName="material"
-            type="text"
-            class="form-control"
-            id="material"
-            placeholder="Describir"
-            required
-          />
+      </div>
+    
+      <div class="col-md-2">
+        <div class="input-container">
+          <label for="numCirugia" class="floating-label">N.º de Cirugía</label>
+          <input formControlName="numCirugia" type="number" class="form-control" id="numCirugia" placeholder="00" required />
         </div>
       </div>
-
-      <div class="col-12">
+    
+      <div class="col-md-2">
+        <div class="input-container">
+          <label for="numQuirofano" class="floating-label">N.º de Quirófano</label>
+          <input formControlName="numQuirofano" type="number" class="form-control" id="numQuirofano" placeholder="00" required />
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="numExpediente" class="floating-label">Número de Expediente</label>
+          <input formControlName="numExpediente" type="number" class="form-control" id="numExpediente" placeholder="00" required />
+        </div>
+      </div>
+    
+      <!-- Sección: Datos del Paciente -->
+      <div class="col-12 mt-3 mb-1">
+        <i class="iconform bi-person-circle"><span class="etiquetaicono">Datos del Paciente</span></i>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomPaciente" class="floating-label">Nombre del Paciente</label>
+          <input formControlName="nomPaciente" type="text" class="form-control" id="nomPaciente" placeholder="Nombre" required />
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="apellidoPPaciente" class="floating-label">Apellido Paterno</label>
+          <input formControlName="apellidoPPaciente" type="text" class="form-control" id="apellidoPPaciente" placeholder="Primer Apellido" required />
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="apellidoMPaciente" class="floating-label">Apellido Materno</label>
+          <input formControlName="apellidoMPaciente" type="text" class="form-control" id="apellidoMPaciente" placeholder="Segundo Apellido" required />
+        </div>
+      </div>
+    
+      <!-- Sección: Encargados de la Cirugía -->
+      <div class="col-12 mt-3 mb-1">
+        <i class="iconform bi-people"><span class="etiquetaicono">Datos del Personal</span></i>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomCirujano" class="floating-label">Nombre del Cirujano</label>
+          <select formControlName="nomCirujano" id="nomCirujano" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomAnestesiologo" class="floating-label">Nombre del Anestesiólogo</label>
+          <select formControlName="nomAnestesiologo" id="nomAnestesiologo" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomResidente" class="floating-label">Nombre del Residente</label>
+          <select formControlName="nomResidente" id="nomResidente" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomEnfeInt" class="floating-label">Nombre del Enfermero Interno</label>
+          <select formControlName="nomEnfeInt" id="nomEnfeInt" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomEnfeCir" class="floating-label">Nombre del Enfermero Circulante</label>
+          <select formControlName="nomEnfeCir" id="nomEnfeCir" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <!-- Sección: Datos de la Cirugía -->
+      <div class="col-12 mt-3 mb-1">
+        <i class="iconform bi-activity"><span class="etiquetaicono">Datos de la Cirugía</span></i>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="nomCirugia" class="floating-label">Nombre de la Cirugía</label>
+          <select formControlName="nomCirugia" id="nomCirugia" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="tipoAnes" class="floating-label">Tipo de Anestesia</label>
+          <select formControlName="tipoAnes" id="tipoAnes" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-2">
+        <div class="input-container">
+          <label for="iniciaAnes" class="floating-label">Inicio Anestesia</label>
+          <input formControlName="iniciaAnes" type="datetime-local" class="form-control" id="iniciaAnes" required />
+        </div>
+      </div>
+    
+      <div class="col-md-2">
+        <div class="input-container">
+          <label for="finAnes" class="floating-label">Fin Anestesia</label>
+          <input formControlName="finAnes" type="datetime-local" class="form-control" id="finAnes" required />
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="medicamento" class="floating-label">Medicamento</label>
+          <select formControlName="medicamento" id="medicamento" class="form-select" required>
+            <option selected>Choose</option>
+            <option>...</option>
+          </select>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="suturas" class="floating-label">Suturas</label>
+          <input formControlName="suturas" type="text" class="form-control" id="suturas" placeholder="Describir" required />
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="input-container">
+          <label for="material" class="floating-label">Material</label>
+          <input formControlName="material" type="text" class="form-control" id="material" placeholder="Describir" required />
+        </div>
+      </div>
+    
+      <!-- Confirmación -->
+      <div class="col-12 mt-4">
         <div class="form-check">
-          <input
-            formControlName="validCheck"
-            class="form-check-input"
-            type="checkbox"
-            id="validCheck"
-            required
-          />
-          <label class="form-check-label" for="validCheck"
-            >Todos los datos son correctos</label
-          >
+          <input formControlName="validCheck" class="form-check-input" type="checkbox" id="validCheck" required />
+          <label class="form-check-label" for="validCheck">Todos los datos son correctos</label>
         </div>
       </div>
+    
+      <!-- Botón Confirmar -->
+      <div class="d-grid gap-2 col-3 mx-auto mt-1">
+        <button (click)="ConfirmarDatos()" class="btn btn-danger" type="submit">Confirmar Datos</button>
+      </div>
+    
+    </div>
+    
       <div class="hrflex"></div>
 
-      <div class="d-grid gap-2 col-3 mx-auto">
-        <button
-          (click)="ConfirmarDatos()"
-          class="btn btn-danger center"
-          type="submit"
-        >
-          Confirmar Datos
-        </button>
-      </div>
+      
     </form>
 
     <!-- Tabla debajo del formulario -->
+    <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
     <table class="table mt-4">
       <thead>
         <tr>
@@ -301,6 +235,8 @@
           <th scope="col">Medicamento</th>
           <th scope="col">Suturas</th>
           <th scope="col">Material</th>
+          <th scope="col">Acciones</th>
+
         </tr>
       </thead>
       <tbody>
@@ -326,9 +262,14 @@
           <td>{{ cirugias.medicamento }}</td>
           <td>{{ cirugias.suturas }}</td>
           <td>{{ cirugias.material }}</td>
+          <td><a href="#"><i class="tableiconE bi bi-pencil-square"></i>  
+            <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a>
+          </a></td>
         </tr>
         }
       </tbody>
     </table>
   </div>
+
+  
 </div>
