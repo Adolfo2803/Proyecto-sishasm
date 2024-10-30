@@ -10,3 +10,9 @@
 .tablaiconos{
     display: flex;
 }
+.Scrolltable{
+    overflow:hidden;
+    overflow-x: scroll;
+    height: 500px;
+    overflow-y: scroll;
+}

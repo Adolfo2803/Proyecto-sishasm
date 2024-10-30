@@ -4,11 +4,12 @@ import { TablaArchiService } from './services/tabla-archi.service';
 import { RouterOutlet } from '@angular/router';
 import { ArchivoTableComponent } from './components/archivo-table/archivo-table.component';
 import Tabla_arch from './interfaces/Tabla_Arch';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-archivo-clinic',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterOutlet,ArchivoTableComponent],
+  imports: [ReactiveFormsModule, RouterOutlet,ArchivoTableComponent,CommonModule],
   templateUrl: './archivo-clinic.component.html',
   styleUrl: './archivo-clinic.component.css'
 })
@@ -43,5 +44,5 @@ export default class ArchivoClinicComponent {
       resetForm(){
         this.form.reset();
       }
-}
+    ageOptions: number[] = [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];}
 

@@ -1,3 +1,4 @@
+<div class="Scrolltable">
 <div class="row">
     <div col-12>
       <table class="table table-responsive">
@@ -25,7 +26,7 @@
           @for(tablaitem of tabla_archive.tabla_data; track $index) {
             <tr>
               <td>{{tablaitem.expediente}}</td>
-              <td>{{tablaitem.nombre}}</td>
+              <td>{{tablaitem.nombre_paciente}}</td>
               <td>{{tablaitem.ap_paterno}}</td>
               <td>{{tablaitem.ap_materno}}</td>
               <td>{{tablaitem.sexo}}</td>
@@ -33,8 +34,8 @@
               <td>{{tablaitem.curp}}</td>
               <td>{{tablaitem.domicilio}}</td>
               <td>{{tablaitem.telefono}}</td>
-              <td>{{tablaitem.elabora}}</td>
-              <td>{{tablaitem.fecha}}</td>
+              <td>{{tablaitem.elaboro}}</td>
+              <td>{{tablaitem.fecha_elab}}</td>
               <td>{{tablaitem.ubicacion}}</td>              <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
 
 
@@ -46,4 +47,5 @@
   
     </div>
   
-  </div>    
+  </div>  
+</div>  
