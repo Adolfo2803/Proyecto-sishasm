@@ -6,10 +6,10 @@
         <h2 class="title">Registro de Vacaciones</h2>
         <div class="hrflex"></div>
         <i class=" iconform bi bi-person-circle"><span class="etiquetaicono">Datos del paciente</span></i>
-        <form [formGroup]="vacacionesForms" (ngSubmit)="onSubmit()" class="row g-3 needs-validation " novalidate>
+        <form [formGroup]="vacacionesForms" (ngSubmit)="onSubmit()" class="row g-6 needs-validation " novalidate>
             <div class="row">
                 <!-- Campo de Nombre -->
-                <div class="col-md-6 mb-3">
+                <div class="col-md-6 mb-6">
                     <div class="input-container">
                     <label for="name" class="floating-label">Nombre</label>
                     <input formControlName="name" type="text" class="form-control" id="name"
@@ -69,12 +69,19 @@
                 </div>
             </div>
 
-            <!-- Botón Guardar -->
-            <button (click)="agregarData()" type="submit" class="btn btn-success w-100">Guardar</button>
-        </form>
+            <div class="row">
+          
+                <div class="col-sm mb-3">
+                  
+                  <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
+                  
+                </div>
+              </div>
+              </form>
 
 
     </div>
+    <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
     <div class="row">
         <div col-12>
             <table class="table table-responsive">
@@ -86,6 +93,7 @@
                         <th scope="col">Fecha Inicio</th>
                         <th scope="col">Fecha Termino</th>
                         <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -100,6 +108,7 @@
                                     <td>{{item.fecha_inicio}}</td>
                                     <td>{{item.fecha_termino}}</td>
                                     <td>{{item.estado}}</td>
+                                    
                                 </tr>
                             }
 

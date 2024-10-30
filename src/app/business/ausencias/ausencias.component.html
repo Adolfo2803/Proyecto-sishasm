@@ -9,7 +9,7 @@
         <form 
              [formGroup]="ausenciasForm"
              
-             class="row g-3 needs-validation"
+             class="row g-6 needs-validation"
              novalidate
              >
             <div class="row">
@@ -57,17 +57,26 @@
                     <input formControlName ="fecha_termino" type="date" class="form-control" id="fecha_termino" required>
                 </div>
             </div>
+            
             </div>
   
   
-            <!-- Botón Guardar -->
-            <button (click)="agregarData()" type="submit" class="btn btn-success w-100">Guardar</button>
-        </form>
+            <div class="row">
+          
+                <div class="col-sm mb-4">
+                  
+                  <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
+                  
+                </div>
+              </div>
+              
+              </form>
   
 
     </div>
+    <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
     <div class="row">
-        <div col-12>
+        <div col-mb-3>
             <table class="table table-responsive">
                 <thead class="thead-dark">
                     <tr>
