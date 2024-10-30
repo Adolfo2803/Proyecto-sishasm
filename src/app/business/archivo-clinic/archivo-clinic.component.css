@@ -26,8 +26,9 @@ hr {
     background-color: #BC955C;
     border-color: #9D2449;
     margin-top: 1rem;
-    width: 5rem;
+    width: auto;
     font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     }
     .btn-guardar:hover {
         color: aliceblue;
@@ -43,21 +44,13 @@ hr {
         height: 2px;
         border: 0;
         background-color: #235b4e;
-        margin-top: 2rem;
         margin-bottom: 1rem;
         padding: 0;
-    }.hrflex-down{
-        display: flex;
-        height: 2px;
-        border: 0;
-        background-color: #235b4e;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        padding: 0;
+    
     }
     .title{
         color: #235b4e;
-        text-align: center;
+        text-align: justify;
     }
 
     /*inicia css de label flotante para los inputs
@@ -95,4 +88,10 @@ hr {
     padding: 0 5px;
     pointer-events: none;
   }
-  
+  .iconform{
+color: #235b4e;
+  }
+  .etiquetaicono{
+    margin-left: 4px;
+    font-weight: 700;
+  }
