@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { busquedaC } from './services/busquedaC.service';
 
 @Component({
   selector: 'app-busqueda-cirugias',
@@ -32,7 +33,7 @@ export default class BusquedaCirugiasComponent {
    //Se define el formulario
    busquedaCForm: FormGroup;
 
-   constructor() {
+   constructor(public busquedacService: busquedaC) {
      // se inicializa el formulario con los campos
      this.busquedaCForm = new FormGroup({
        search: new FormControl('', [Validators.required, Validators.minLength(3)]),  // Campo de búsqueda con validación

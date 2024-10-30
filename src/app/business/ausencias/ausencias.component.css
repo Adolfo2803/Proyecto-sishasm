@@ -84,3 +84,16 @@
           background-color: #9D2449; /* Cambiar a un azul más claro */
           transform: scale(1.05); /* Aumentar un poco el tamaño al hacer hover */
         }
+
+        .tableiconE{
+          margin-right: 1em;
+          color: burlywood;
+          font-size: 1.5em;
+      }
+      .tableiconD{
+          color: crimson;
+          font-size: 1.5em;
+      }
+      .tablaiconos{
+          display: flex;
+      }
