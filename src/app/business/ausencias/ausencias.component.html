@@ -4,6 +4,8 @@
     <div class="col-form-container">
         <h2 class="title">Registro de Ausencias</h2>
         <div class="hrflex"></div>
+        <i class=" iconform bi bi-person-circle"><span class="etiquetaicono">Datos del paciente</span></i>
+        
         <form 
              [formGroup]="ausenciasForm"
              
@@ -25,7 +27,7 @@
                     <input formControlName = "registro" type ="text" class="form-control" id="registro" placeholder="Registro" required>
                 </div>
             </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-4 mb-4">
                     <div class="input-container">
                     <label for="autorizo" class="floating-label">Autorizo</label>
                     <input formControlName = "autorizo" type ="text" class="form-control" id="autorizo" placeholder="Autorizo" required>
