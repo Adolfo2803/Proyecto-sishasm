@@ -48,17 +48,17 @@
         <div class="row">
           <div class="col-sm form-group">
             <div class="input-container">
-            <input type="date" formControlName="sexo" class="form-control" id="fecha-elaboracion">
+            <input type="date" formControlName="sexo" class="form-control" id="sexo">
             <label for="fecha-elaboracion" class="floating-label">Sexo</label>
             </div>
 
-            <div class="alert alert-danger" [hidden]="form.get('sexo')?.valid ||form.get('fecha')?.pristine ">
+            <div class="alert alert-danger" [hidden]="form.get('sexo')?.valid ||form.get('sexo')?.pristine ">
               Obligatorio</div>
           </div>
 
           <div class="col-sm form-group">
             <div class="input-container">
-              <input type="text" formControlName="edad" class="form-control" id="elabora" placeholder="Elabora...">
+              <input type="text" formControlName="edad" class="form-control" id="elabora" placeholder="edad...">
             <label for="elabora" class="floating-label">Edad</label>
 
             </div>
