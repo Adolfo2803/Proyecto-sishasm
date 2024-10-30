@@ -12,9 +12,15 @@ export class TablaArchiService {
       nombre: 'alexiiis',
       ap_paterno: 'gomez',
       ap_materno: 'torres',
+      sexo:'Masculino',
+      edad: 12,
+      curp: "GOTA040119HVZMRLA2",
+      domicilio: "Gumercinda ramirez #3",
+      telefono: "7838315029",
       fecha: '21-02-2019',
       elabora: 'Juanito banana',
-      matri: '12012021'
+      ubicacion:"farmacia",
+      status: 12012021
     }]
    }
    agregarData(tabla: Tabla_arch){

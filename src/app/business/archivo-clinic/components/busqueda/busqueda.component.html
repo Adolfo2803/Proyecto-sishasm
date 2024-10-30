@@ -51,6 +51,7 @@
                             <th scope="col">Fecha Elaboración</th>
                             <th scope="col">Nombre_elaboracion</th>
                             <th scope="col">matricula</th>
+                            <th scope="col">Acciones</th>
                   
                           </tr>
                         </thead>
@@ -63,7 +64,8 @@
                           <td>{{tablaitem.ap_materno}}</td>
                           <td>{{tablaitem.fecha}}</td>
                           <td>{{tablaitem.elabora}}</td>
-                          <td>{{tablaitem.matri}}</td>
+                          <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
+
                 
                           
                         </tr>
@@ -78,12 +80,7 @@
             </div>
 
             
-            <div class="row">
-                <div class="col-12 text-center">
-                    <button class="btn btn-guardar" type="submit" [disabled]="formBusqueda.validator">Búsqueda</button>
-               
-                </div>
-            </div>
+            
 
         </form>
 

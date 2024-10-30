@@ -21,9 +21,15 @@ export default class ArchivoClinicComponent {
     nombre: new FormControl('', Validators.required),
     ap_paterno: new FormControl('', Validators.required),
     ap_materno: new FormControl('', Validators.required),
+    sexo: new FormControl('', Validators.required),
+    edad: new FormControl('', Validators.required),
+    curp: new FormControl('', Validators.required),
+    domicilio: new FormControl('', Validators.required),
+    telefono: new FormControl('', Validators.required),
     fecha: new FormControl('', Validators.required),
     elabora: new FormControl('', Validators.required),
-    matri: new FormControl('', Validators.required),
+    ubicacion: new FormControl('', Validators.required),
+    status: new FormControl('', Validators.required),
   });
   
   agregarData(){
