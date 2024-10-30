@@ -1,6 +1,6 @@
 export default interface Tabla_arch{
     expediente: string;
-    nombre: string;
+    nombre_paciente: string;
     ap_paterno: string;
     ap_materno: string;
     sexo: string;
@@ -8,8 +8,8 @@ export default interface Tabla_arch{
     curp: string;
     domicilio:string;
     telefono: string;
-    fecha: string;
-    elabora: string;
+    fecha_elab: string;
+    elaboro: string;
     ubicacion: string;
     status: number;
 }

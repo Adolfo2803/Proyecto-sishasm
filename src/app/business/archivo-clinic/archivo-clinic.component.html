@@ -46,57 +46,67 @@
         </div>
   
         <div class="row">
-          <div class="col-sm form-group">
+          <div class="col-sm-3 form-group">
             <div class="input-container">
-            <input type="date" formControlName="sexo" class="form-control" id="sexo">
-            <label for="fecha-elaboracion" class="floating-label">Sexo</label>
+              <select formControlName="sexo" class="form-control" id="sexo" required>
+                <option value="" disabled selected>Seleccione...</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+              </select>
+              <label for="sexo" class="floating-label">Sexo</label>
             </div>
-
-            <div class="alert alert-danger" [hidden]="form.get('sexo')?.valid ||form.get('sexo')?.pristine ">
-              Obligatorio</div>
-          </div>
-
-          <div class="col-sm form-group">
-            <div class="input-container">
-              <input type="text" formControlName="edad" class="form-control" id="elabora" placeholder="edad...">
-            <label for="elabora" class="floating-label">Edad</label>
-
+            <div class="alert alert-danger" [hidden]="form.get('sexo')?.valid || form.get('sexo')?.pristine">
+              Obligatorio
             </div>
-            <div class="alert alert-danger"
-              [hidden]="form.get('elabora')?.valid ||form.get('elabora')?.pristine ">Edad
-              Obligatoria</div>
-  
           </div>
+        
+          <div class="col-sm-1 form-group">
+            <div class="input-container">
+              <select formControlName="edad" class="form-control" id="edad" required>
+                <option value="" disabled selected>edad...</option>
+                <option *ngFor="let age of ageOptions" [value]="age" [selected]="age === 25">{{ age }}</option>
+            
+              </select>
+              <label for="edad" class="floating-label">Edad</label>
+            </div>
+            <div class="alert alert-danger" [hidden]="form.get('edad')?.valid || form.get('edad')?.pristine">
+              Edad Obligatoria
+            </div>
+          </div>
+        
+
+          
           <div class="col-sm form-group">
             <div class="input-container">
-              <input type="text" formControlName="curp" class="form-control" id="matricula" placeholder="Matrícula...">
+              <input type="text" formControlName="curp" class="form-control" id="matricula" placeholder="CURP...">
             <label for="matricula" class="floating-label">curp</label>
             </div>
             <div class="alert alert-danger" [hidden]="form.get('curp')?.valid ||form.get('curp')?.pristine ">
               CURP Obligatoria</div>
   
           </div>
-        </div>
-
-        <div class="row">
           <div class="col-sm form-group">
             <div class="input-container">
-            <input type="date" formControlName="domicilio" class="form-control" id="fecha-elaboracion">
-            <label for="fecha-elaboracion" class="floating-label">Domicilio</label>
+            <input type="text" formControlName="domicilio" class="form-control" id="domicilio">
+            <label for="domicilio" class="floating-label">Domicilio</label>
             </div>
 
             <div class="alert alert-danger" [hidden]="form.get('domicilio')?.valid ||form.get('domicilio')?.pristine ">
               Obligatorio</div>
           </div>
+        </div>
 
-          <div class="col-sm form-group">
+        <div class="row">
+          
+
+          <div class="col-sm-2 form-group">
             <div class="input-container">
               <input type="text" formControlName="telefono" class="form-control" id="telefono" placeholder="telefono...">
             <label for="elabora" class="floating-label">Telefono</label>
 
             </div>
             <div class="alert alert-danger"
-              [hidden]="form.get('telefono')?.valid ||form.get('telefono')?.pristine ">Edad
+              [hidden]="form.get('telefono')?.valid ||form.get('telefono')?.pristine ">Telefono
               Obligatoria</div>
   
           </div>
@@ -130,11 +140,11 @@
           </div>
           <div class="col-sm form-group">
             <div class="input-container">
-              <input type="text" formControlName="ubicacion" class="form-control" id="matricula" placeholder="Matrícula...">
-            <label for="matricula" class="floating-label">Ubicacion</label>
+              <input type="text" formControlName="ubicacion" class="form-control" id="matricula" placeholder="ubicacion en hospital...">
+            <label for="ubicacion" class="floating-label">Ubicacion</label>
             </div>
             <div class="alert alert-danger" [hidden]="form.get('ubicacion')?.valid ||form.get('ubicacion')?.pristine ">
-              Matricula Obligatoria</div>
+              Ubicacion Obligatoria</div>
   
           </div>
         </div>
