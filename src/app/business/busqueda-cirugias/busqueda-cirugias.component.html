@@ -31,9 +31,10 @@
         <form [formGroup]="busquedaCForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-12 mb-3">
-                    <label for="searchInput" class="form-label">Búsqueda</label>
-                    <input type="text" class="form-control" id="searchInput" formControlName="search" placeholder="Ingrese un dato">
-                    
+                  <div class="input-container">
+                    <input type="text" formControlName="search" class="form-control" id="searchInput" placeholder="ingrese un dato" required>
+                    <label for="searchInput" class="floating-label">Busqueda</label>
+                  </div>
                 </div>
                 <div class="col-12 mb-3">
                    <label for="tableInput" class="form-label">Tabla</label>

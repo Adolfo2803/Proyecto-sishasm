@@ -120,3 +120,16 @@
                 color: #235b4e;
                 text-align: justify;
             }
+            .tableiconE{
+              margin-right: 1em;
+              color: burlywood;
+              font-size: 1.5em;
+          }
+          .tableiconD{
+              color: crimson;
+              font-size: 1.5em;
+          }
+          .tablaiconos{
+              display: flex;
+          }
+          

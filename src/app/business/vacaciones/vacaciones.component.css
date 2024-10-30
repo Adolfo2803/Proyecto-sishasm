@@ -15,13 +15,6 @@
     padding: 0;
   }
   
-  input{
-    border-color: #9D2449;
-    background-color: rgb(239, 238, 238);
-  }
-  label{
-    color: #9D2449;
-  }
   
   select{
     border-color: #9D2449;
@@ -74,3 +67,40 @@
   padding: 0 5px;
   pointer-events: none;
 }
+
+.iconform{
+  color: #235b4e;
+    }
+    .etiquetaicono{
+      margin-left: 4px;
+      font-weight: 700;
+    }
+
+
+    .btn-guardar{
+      color: aliceblue;
+      background-color: #BC955C;
+      border-color: #9D2449;
+      margin-top: 1rem;
+      width: auto;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      }
+      .btn-guardar:hover {
+          color: aliceblue;
+          background-color: #9D2449; /* Cambiar a un azul más claro */
+          transform: scale(1.05); /* Aumentar un poco el tamaño al hacer hover */
+        }
+
+        .tableiconE{
+          margin-right: 1em;
+          color: burlywood;
+          font-size: 1.5em;
+      }
+      .tableiconD{
+          color: crimson;
+          font-size: 1.5em;
+      }
+      .tablaiconos{
+          display: flex;
+      }
