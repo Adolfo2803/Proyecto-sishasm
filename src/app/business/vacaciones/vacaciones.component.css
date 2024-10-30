@@ -38,3 +38,39 @@
       margin-top: 1rem;
       width: 5rem;
       }
+
+       /*inicia css de label flotante para los inputs
+    /* Contenedor del input */
+.input-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Estilos del input */
+.input-container .form-control {
+  border: 2px solid #BC955C; /* Color de borde por defecto */
+  border-radius: 10px;
+  padding: 0 15px;
+  height: 40px; 
+  font-family: "Montserrat", sans-serif;
+  transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.input-container .form-control:focus {
+  border-color: #235b4e; /* Color verde */
+  outline: none; /* Opcional: elimina el contorno azul por defecto en algunos navegadores */
+}
+
+/* Estilos del label flotante, siempre en la parte superior */
+.input-container .floating-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  color: #BB965C;
+  font-size: 13px;
+  background-color: white;
+  padding: 0 5px;
+  pointer-events: none;
+}

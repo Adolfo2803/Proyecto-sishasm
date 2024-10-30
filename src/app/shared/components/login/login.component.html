@@ -3,7 +3,7 @@
       <div class=" imagen col-md-6 bg-light d-flex justify-content-center align-items-center">
     
       </div>
-      <div class="col-md-6 d-flex align-items-center ">
+      <div class="col-md-6 d-flex align-items-center  ">
         <div class="container border border-warning rounded-3 p-5">
           <h2>Iniciar Sesión</h2>
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
@@ -15,7 +15,7 @@
               <label for="password">Contraseña:</label>
               <input type="password" id="password" class="form-control" formControlName="password" required>
             </div>
-            <button type="submit" class="btn btn-primary " [disabled]="!loginForm.valid">Ingresar</button>
+            <button type="submit" class="btn btn-primary " routerLink="/dashboard"[disabled]="!loginForm.valid">Ingresar</button>
           </form>
         </div>
       </div>

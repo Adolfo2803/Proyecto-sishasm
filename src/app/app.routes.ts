@@ -6,6 +6,10 @@ export const routes: Routes = [
         loadComponent: () => import('./shared/components/layout/layout.component'),
         children: [
             {
+                path: 'login',
+                loadComponent: () => import('./shared/components/login/login.component')
+            },
+            {
                 path: 'dashboard',
                 loadComponent: () => import('./business/dashboard/dashboard.component')
             },
@@ -37,10 +41,7 @@ export const routes: Routes = [
                 path: 'busqueda-cirugias',
                 loadComponent: () => import('./business/busqueda-cirugias/busqueda-cirugias.component')
             },
-            {
-                path: 'login',
-                loadComponent: () => import('./shared/components/login/login.component')
-            },
+         
 
            
 
@@ -48,14 +49,14 @@ export const routes: Routes = [
 
             {
                 path: '',
-                redirectTo: 'dashboard',
+                redirectTo: 'login',
                 pathMatch:'full'
             }
         ]
     },
     {
         path: '**',
-        redirectTo:'dashboard'
+        redirectTo:'login'
     }
 
    
