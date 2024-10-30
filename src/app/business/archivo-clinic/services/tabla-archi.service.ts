@@ -20,7 +20,7 @@ export class TablaArchiService {
       fecha: '21-02-2019',
       elabora: 'Juanito banana',
       ubicacion:"farmacia",
-      status: 12012021
+      status: 1
     }]
    }
    agregarData(tabla: Tabla_arch){
