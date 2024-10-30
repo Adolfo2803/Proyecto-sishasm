@@ -1,8 +1,10 @@
 <div class="container-fluid">
     <div class="form-container">
+      
       <form class="" [formGroup]="form" (ngSubmit)="resetForm()">
         <h1 class="title">Registro Archivo Clínico</h1>
         <div class="hrflex"></div>
+        <i class=" iconform bi bi-person-circle"><span class="etiquetaicono">Datos del paciente</span></i>
         <div class="row">
           <div class="col-sm form-group">
             <div class="input-container">
@@ -44,6 +46,7 @@
         </div>
   
         <br>
+        <i class=" iconform bi-info-circle"><span class="etiquetaicono">Datos del capturista</span></i>
         <div class="row">
           <div class="col-sm form-group">
             <div class="input-container">
@@ -79,14 +82,22 @@
   
   
         <div class="row">
+          
           <div class="col-sm">
+            
             <button (click)="agregarData()" type="submit" class="btn btn-guardar">Guardar</button>
+            
           </div>
         </div>
+        
       </form>
+      
     </div>
+    
   </div>
   <br>
+  <div class="hrflex"></div>
+
   <!--
   
   <div class="row">
@@ -127,6 +138,8 @@
   
   </div>
   -->
+  <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>
+
   <app-archivo-table></app-archivo-table>
   <!--<app-formpractica></app-formpractica>-->
 
