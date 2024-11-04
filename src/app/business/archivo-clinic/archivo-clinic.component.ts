@@ -3,8 +3,9 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { TablaArchiService } from './services/tabla-archi.service';
 import { RouterOutlet } from '@angular/router';
 import { ArchivoTableComponent } from './components/archivo-table/archivo-table.component';
-import Tabla_arch from './interfaces/Tabla_Arch';
+import Tabla_arch from './interfaces/Paciente';
 import { CommonModule } from '@angular/common';
+import Paciente from './interfaces/Paciente';
 
 @Component({
   selector: 'app-archivo-clinic',
@@ -14,7 +15,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './archivo-clinic.component.css'
 })
 export default class ArchivoClinicComponent {
-  constructor(public tabla_archive: TablaArchiService){}
+  constructor(private tabla_archive: TablaArchiService){}
+
+
+  listPaciente: Paciente[] = [];
 
   form: FormGroup = new FormGroup
   ({
@@ -38,9 +42,27 @@ export default class ArchivoClinicComponent {
     const formStorage = JSON.parse(localStorage.getItem('form')!) as Tabla_arch;
     
       console.log(this.form.value);
-      this.tabla_archive.agregarData(this.form.value);
+      //this.tabla_archive.getPacientes()
     
       }  
+
+      list(){
+        this.tabla_archive.getPacientes().subscribe(resp=>{
+          if(resp){
+            
+
+            this.listPaciente = resp;
+            console.log(resp)
+          }
+        });
+      }
+
+
+      obtPacientes(){
+       
+        console.log(this.tabla_archive.getPacientes())
+        
+          } 
       resetForm(){
         this.form.reset();
       }

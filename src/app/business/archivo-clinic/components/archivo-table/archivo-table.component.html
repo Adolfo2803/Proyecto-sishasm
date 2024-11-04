@@ -23,10 +23,10 @@
           </tr>
         </thead>
         <tbody>
-          @for(tablaitem of tabla_archive.tabla_data; track $index) {
+          @for(tablaitem of listPaciente; track $index) {
             <tr>
               <td>{{tablaitem.expediente}}</td>
-              <td>{{tablaitem.nombre_paciente}}</td>
+              <td>{{tablaitem.paciente}}</td>
               <td>{{tablaitem.ap_paterno}}</td>
               <td>{{tablaitem.ap_materno}}</td>
               <td>{{tablaitem.sexo}}</td>

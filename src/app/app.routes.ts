@@ -13,9 +13,13 @@ export const routes: Routes = [
                 path: 'dashboard',
                 loadComponent: () => import('./business/dashboard/dashboard.component')
             },
+            // {
+            //     path: 'archivo_clinic',
+            //     loadComponent: () => import('./business/archivo-clinic/archivo-clinic.component')
+            // },
             {
-                path: 'archivo_clinic',
-                loadComponent: () => import('./business/archivo-clinic/archivo-clinic.component')
+                path: 'archivob',
+                loadComponent: () => import('./business/archivo/archivo.component')
             },
             {
                 path: 'buscar_archivo',
