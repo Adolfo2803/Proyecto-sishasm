@@ -28,11 +28,11 @@ export default class AusenciasComponent {
    
 this.ausenciasService.agregarAusencia(this.ausenciasForm.value);
      
+
  
   }
 
-  
- 
+
  
   }
   

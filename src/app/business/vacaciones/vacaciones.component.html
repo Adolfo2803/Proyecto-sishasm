@@ -8,6 +8,7 @@
         <i class=" iconform bi bi-person-circle"><span class="etiquetaicono">Datos del paciente</span></i>
         <form [formGroup]="vacacionesForms" (ngSubmit)="onSubmit()" class="row g-6 needs-validation " novalidate>
             <div class="row">
+                
                 <!-- Campo de Nombre -->
                 <div class="col-md-6 mb-6">
                     <div class="input-container">
@@ -62,13 +63,13 @@
                     <select formControlName="estado" class="form-select" id="estado" required>
                         <option value="">Selecciona el estado</option>
                         <option value="Aprobado">Aprobado</option>
-                        <option value="pendiente">Pendiente</option>
-                        <option value="rechazado">Rechazado</option>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Rechazado">Rechazado</option>
                     </select>
                 </div>
                 </div>
             </div>
-
+        
             <div class="row">
           
                 <div class="col-sm mb-3">
@@ -79,6 +80,8 @@
               </div>
               </form>
 
+
+              <div class="hrflex"></div>
 
     </div>
     <i class="iconform bi-table"><span class="etiquetaicono">Tabla de resultados</span></i>

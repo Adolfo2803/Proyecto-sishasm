@@ -11,17 +11,16 @@ import { busquedaC } from './services/busquedaC.service';
   styleUrl: './busqueda-cirugias.component.css'
 })
 export default class BusquedaCirugiasComponent {
-
- 
   //botones escondidos
-  botonSeleccionado: string | null = null; // Para almacenar el botón seleccionado
+  botonSeleccionado: string | null = null;
 
-  ocultarBotones(nombreBoton: string): void {
-    this.botonSeleccionado = nombreBoton;
+  ocultarBotones(boton: string): void {
+    this.botonSeleccionado = boton;
+  
     
     // Desplazar el botón al inicio
     setTimeout(() => {
-      const botonElement = document.querySelector(`.btn-${nombreBoton}`) as HTMLElement;
+      const botonElement = document.querySelector(`.btn-${this.botonSeleccionado}`) as HTMLElement;
       if (botonElement) {
         botonElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }

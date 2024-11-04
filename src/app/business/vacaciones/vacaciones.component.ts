@@ -27,6 +27,7 @@ export default class VacacionesComponent {
   })
   
 agregarData() {
+  
 
   this.vacacionesService.agregarvacaciones(this.vacacionesForms.value);
 }
@@ -42,6 +43,8 @@ agregarData() {
       alert('Formulario guardado correctamente!');
     } else {
       alert('El formulario no es válido. Por favor, rellena todos los campos requeridos.');
-    }
+      this.vacacionesForms.reset();
+    } 
+    
   }
   }

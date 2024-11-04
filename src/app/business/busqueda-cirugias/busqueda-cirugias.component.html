@@ -6,25 +6,27 @@
         
         
         <div class="row mb-3" >
-            <div class="col-12 col-md-2 mb-2">
-                <a class="btn btn-Fecha w-100"  role="button"  ngIf="!botonSeleccionado ===null|| botonSeleccionado === 'Fecha'" (click)="ocultarBotones('Fecha')">Fecha</a>
-            </div>
-            <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujia w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirugia'" (click)="ocultarBotones('Cirugia')">Cirugia</button>
-            </div>
-            <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Expediente w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Expediente'" (click)="ocultarBotones('Expediente')">Expediente</button>
-            </div>
-            <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Nombre w-100" type="submit"  ngIf="!botonSeleccionado || botonSeleccionado === 'Nombre'" (click)="ocultarBotones('Nombre')">Nombre</button>
-            </div>
-            <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Medico w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Medico'" (click)="ocultarBotones('Medico')">Medico</button>
-            </div>
-            <div class="col-12 col-md-2 mb-2">
-                <button class="btn btn-Cirujano w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirujano'" (click)="ocultarBotones('Cirujano')">Cirujano</button>
-            </div>
-        </div>
+          <div class="col-12 col-md-2 mb-2">
+              <a class="btn btn-Fecha w-100"  role="button"  ngIf="!botonSeleccionado ===null|| botonSeleccionado === 'Fecha'" (click)="ocultarBotones('Fecha')">Fecha</a>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Cirujia w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirugia'" (click)="ocultarBotones('Cirugia')">Cirugia</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Expediente w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Expediente'" (click)="ocultarBotones('Expediente')">Expediente</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Nombre w-100" type="submit"  ngIf="!botonSeleccionado || botonSeleccionado === 'Nombre'" (click)="ocultarBotones('Nombre')">Nombre</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Medico w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Medico'" (click)="ocultarBotones('Medico')">Medico</button>
+          </div>
+          <div class="col-12 col-md-2 mb-2">
+              <button class="btn btn-Cirujano w-100" type="submit" ngIf="!botonSeleccionado || botonSeleccionado === 'Cirujano'" (click)="ocultarBotones('Cirujano')">Cirujano</button>
+          </div>
+      </div>
+        
+        
       
 
         
@@ -62,6 +64,7 @@
                           <td>{{ busquedaC.nomPaciente }}</td>
                           <td>{{ busquedaC.nomCirujano }}</td>
                           <td>{{ busquedaC.nomAnestesiologo }}</td>
+                          <td><div class="tablaiconos"><a href="#"><i class="tableiconE bi bi-pencil-square"></i></a>  <a href="#"><i class="tableiconD bi bi-trash3-fill"></i></a></div></td>
                         </tr>
                       }
                      
@@ -72,7 +75,7 @@
                 
             </div>
 
-            
+            <div class="hrflex"></div>
             <div class="row">
                 <div class="col-12 text-center">
                     <button class="btn btn-danger" type="submit" [disabled]="busquedaCForm.validator">Búsqueda</button>

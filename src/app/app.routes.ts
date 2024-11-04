@@ -18,7 +18,7 @@ export const routes: Routes = [
             //     loadComponent: () => import('./business/archivo-clinic/archivo-clinic.component')
             // },
             {
-                path: 'archivob',
+                path: 'archivo',
                 loadComponent: () => import('./business/archivo/archivo.component')
             },
             {

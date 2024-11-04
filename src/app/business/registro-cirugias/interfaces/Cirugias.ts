@@ -1,8 +1,8 @@
 export default interface Cirugias{
     id:number;
-    fechaCirugia: String;
-    numCirugia: Number;
-    numQuirofano: Number;
+    fecha: String;
+    numcirugia: Number;
+    numquirofano: Number;
     numExpediente: Number;
     nomPaciente: String;
     apellidoPPaciente: String;
@@ -14,8 +14,8 @@ export default interface Cirugias{
     nomEnfeInt: String;
     nomEnfeCir: String;
     tipoAnes: String;
-    iniciaAnes: string;
-    finAnes: string;
+    inianestesia: string;
+    teranestesia: string;
     medicamento: string;
     suturas: string;
     material: string;

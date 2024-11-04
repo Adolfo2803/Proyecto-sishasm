@@ -35,7 +35,7 @@ select{
     border: 2px solid #BC955C; /* Color de borde por defecto */
     border-radius: 10px;
     padding: 0 15px;
-    height: 40px; 
+    height: 45px; 
     font-family: "Montserrat", sans-serif;
     transition: border-color 0.3s ease; /* Transición suave para el cambio de color */
   }
@@ -65,6 +65,8 @@ select{
 .input-container .form-select {
   border: 1px solid #BB965C; /* Cambia este color al que necesitas */
   border-radius: 4px;
+  height: 45px; 
+
 }
 
 /* Agrega el color de borde cuando el campo está enfocado */
@@ -136,3 +138,4 @@ select{
   z-index: 1;
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Sombra para mejor visualización */
 }
+
